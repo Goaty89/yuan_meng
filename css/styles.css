@@ -1,0 +1,147 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+ul, li {
+    list-style: none;
+    text-indent: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+article {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    display: flex;
+}
+
+.logo {
+    background: url("../images/meng.gif") no-repeat;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+}
+
+.logo::after {
+    content: '';
+    background: url("../images/color_circle.png") no-repeat;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    z-index: -1;
+}
+
+/* Wrapper */
+#page-nav {
+    width: 100%;
+    background: #a02620;
+    /* If you want the navigation bar to stick on top
+    position: sticky;
+    top: 0;
+    */
+}
+/* Hide Hamburger */
+#hamburger {
+    display: none;
+}
+  
+/* Show Hamburger */
+#page-nav label {
+    display: block;
+    color: #fff;
+    text-align: right;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 30px;
+}
+/* Menu Items */
+.nav--list {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav--list {
+    list-style-type: none;
+    height: 0;
+    margin: 0;
+    padding: 0; 
+    transition: all .5s;
+    overflow: hidden;
+}
+.nav--list li {
+    flex: 2;
+}
+.nav--list li a {
+    color: #faf2f2;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Toggle show/hide menu on checkbox click */
+#hamburger:checked ~ ul {
+    display: block;
+    transition: all .5s;
+    height: 114px;
+}
+
+.full-content {
+    height: 100vh;
+}
+
+.logo-wrapper {
+    position: absolute;
+    z-index: 1;
+}
+
+@media (min-width: 400px) {
+    .nav--list {
+        flex-direction: row;
+        flex: 2;
+        justify-content: space-evenly;
+    }
+    #page-nav label {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav--list {
+        overflow: unset;
+        transition: unset;
+    }
+
+    .nav--list li {
+        flex: none;
+    }
+    .nav--list li a {
+        color: #000;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        border-bottom: 0;
+    }
+}
