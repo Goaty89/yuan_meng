@@ -3,33 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <title>圆梦</title>
 </head>
 <body>
     <article>
-        <header>
-            <nav id="page-nav">
-                <div class="logo-wrapper">
-                    <span class="logo image"></span>
-                </div>
-                <div class="navigation">
-                    <label for="hamburger">&#9776;</label>
-                    <input type="checkbox" id="hamburger"/>
-                    <ul class="nav--list">
-                        <li><a href="#page--introduction">Introduction</a></li>
-                        <li><a href="#page--gallery">Gallery</a></li>
-                        <li><a href="#page--contact">Contact us</a></li>
-                    </ul>
-                </div>
+        <header class="header">
+            <div class="logo-wrapper">
+                <span class="logo image"></span>
+            </div>
+            <nav id="page-nav" class="navigation">
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger"/>
+                <ul class="nav--list">
+                    <li><a href="#page--introduction" class="active">Introduction</a></li>
+                    <li><a href="#page--gallery">Gallery</a></li>
+                    <li><a href="#page--contact">Contact us</a></li>
+                </ul>
             </nav>
+            <div class="header--tail">
+                Footer
+            </div>
         </header>
         <main>
-            <section id="page--introduction" class="full-content">
+            <section id="page--introduction" class="full-content title--wrapper">
+                <h1 class="title--CH">关丹圆梦画室</h1>
+                <h2 class="title--EN">
+                    KUANTAN YUAN MENG ART STUDIO
+                </h2>
+                <h3 class="title--since">SINCE 2008</h3>
+
+                <div class="intro">
+                    Teacher was born in 1953. He has more than 30 years of experience and is proficient in caligraphy, painting, chinese ink painting, oil painting, sketching, etc. The art class currently enrolls preschool and junior high school students.
+                </div>
+            </section>
+            <section id="title--gallery" class="full-content section--bg-fixed page--title">
                 
             </section>
             <section id="page--gallery" class="full-content">
-
+                <div class="entire-content">
+                    <div class="content-carrousel">
+                        <figure class="shadow"><img src="./images/artWork/artwork_1.jpeg"/></figure>
+                        <figure class="shadow"><img src="./images/artWork/artwork_2.jpeg"/></figure>
+                        <figure class="shadow"><img src="./images/artWork/artwork_3.jpeg"/></figure>
+                        <figure class="shadow"><img src="./images/artWork/artwork_4.jpeg"/></figure>
+                        <figure class="shadow"><img src="./images/artWork/artwork_5.jpeg"/></figure>
+                        <figure class="shadow"><img src="./images/artWork/artwork_6.jpeg"/></figure>
+                        <figure class="shadow"><img src="./images/artWork/artwork_7.jpeg"/></figure>
+                        <figure class="shadow"><img src="./images/artWork/artwork_8.jpeg"/></figure>
+                        <figure class="shadow"><img src="./images/artWork/artwork_9.jpeg"/></figure>
+                        <figure class="shadow"><img src="./images/artWork/artwork_10.jpeg"/></figure>
+                    </div>
+                </div>
+                <h2>
+                    <span>STUDENT'S ARTWORK</span>
+                    <span class="years-since">2017 - 2019</span>
+                </h2>
+            </section>
+            <section id="title--contact" class="full-content section--bg-fixed page--title">
+                
             </section>
             <section id="page--contact" class="full-content">
 
@@ -37,5 +70,7 @@
         </main>
         <footer></footer>
     </article>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
