@@ -144,6 +144,8 @@ header {
     .header--tail {
         display: flex;
         align-items: flex-end;
+        font-size: 0.725rem;
+        justify-content: center;
     }
     main {
         width: calc(100% - 300px);
@@ -165,6 +167,7 @@ header {
         border-width: 5px;
         border-image-slice: 1;
         color: #000000;
+        font-family: 'Dancing Script', cursive;
     }
 
     .nav--list li a.active,
@@ -184,21 +187,31 @@ header {
     #page--gallery {
         background-color: pink;
         display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     #page--gallery h2 {
-        flex: 1;
+        margin: 0;
+        text-align: center;
     }
 
     #page--gallery h2 span {
         display: block;
+        word-spacing: 1rem;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #page--gallery h2 span:first-of-type {
+        font-family: 'Meddon', cursive;
+        font-size: 3.125rem;
+        background: linear-gradient(0deg, black, transparent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     #page--gallery h2 .years-since {
         padding: 0 30px;
-        margin: 1rem 0 0;
+        margin: 0;
         font-family: monospace;
         font-weight: 300;
         letter-spacing: 10px;
@@ -206,6 +219,7 @@ header {
         border-top: 1px solid;
         border-bottom: 1px solid;
         font-style: italic;
+        text-align: center;
     }
     
     .slideshow-title {

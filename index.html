@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/slider.css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
     <title>圆梦</title>
 </head>
 <body>
@@ -23,7 +29,7 @@
                 </ul>
             </nav>
             <div class="header--tail">
-                Footer
+                YUAN MENG ART STUDIO&copy;2020 by Charles Yong
             </div>
         </header>
         <main>
@@ -41,25 +47,58 @@
             <section id="title--gallery" class="full-content section--bg-fixed page--title">
                 
             </section>
-            <section id="page--gallery" class="full-content">
-                <div class="entire-content">
-                    <div class="content-carrousel">
-                        <figure class="shadow"><img src="./images/artWork/artwork_1.jpeg"/></figure>
-                        <figure class="shadow"><img src="./images/artWork/artwork_2.jpeg"/></figure>
-                        <figure class="shadow"><img src="./images/artWork/artwork_3.jpeg"/></figure>
-                        <figure class="shadow"><img src="./images/artWork/artwork_4.jpeg"/></figure>
-                        <figure class="shadow"><img src="./images/artWork/artwork_5.jpeg"/></figure>
-                        <figure class="shadow"><img src="./images/artWork/artwork_6.jpeg"/></figure>
-                        <figure class="shadow"><img src="./images/artWork/artwork_7.jpeg"/></figure>
-                        <figure class="shadow"><img src="./images/artWork/artwork_8.jpeg"/></figure>
-                        <figure class="shadow"><img src="./images/artWork/artwork_9.jpeg"/></figure>
-                        <figure class="shadow"><img src="./images/artWork/artwork_10.jpeg"/></figure>
+            <section id="page--gallery" class="full-content">                
+                <div id="slider">
+                    <!-- slider content -->
+                    <div class="slider__warpper">
+                        <div class="flex__container flex--students flex--active" data-slide="1">
+                            <div class="flex__item flex__item--upper">
+                                <div class="flex__content">
+                                    <h2>
+                                        <span>Gallery</span>
+                                        <span>STUDENT'S ARTWORK</span>
+                                        <span class="years-since">2017 - 2019</span>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="flex__item flex__item--down">
+                                <div class="entire-content">
+                                    <div class="content-carrousel">
+                                        <figure class="shadow"><img src="./images/artWork/artwork_1.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_2.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_3.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_4.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_5.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_6.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_7.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_8.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_9.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_10.jpeg"/></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex__container flex--teachers animate--start" data-slide="2">
+                            <div class="flex__item flex__item--upper">
+                                <div class="flex__content">
+                                    <h2>
+                                        <span>Gallery</span>
+                                        <span>TEACHER'S ARTWORK</span>
+                                        <span class="years-since">2017 - 2019</span>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="flex__item flex__item--down">
+                                teachers
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider content end -->
+                    <div class="slider__navi">
+                        <button class="slide-nav active" data-slide="1">Student</button>
+                        <button class="slide-nav" data-slide="2">Teacher</button>
                     </div>
                 </div>
-                <h2>
-                    <span>STUDENT'S ARTWORK</span>
-                    <span class="years-since">2017 - 2019</span>
-                </h2>
             </section>
             <section id="title--contact" class="full-content section--bg-fixed page--title">
                 
@@ -72,5 +111,6 @@
     </article>
     <script src="./js/scroll.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 </html>

@@ -1,0 +1,125 @@
+#slider {
+    width: 100%;
+    position: relative;
+}
+
+.flex__container {
+	position: absolute;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+    display: -ms-flex;
+    flex-direction: column;
+	/* -webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap;  */
+	/* -webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center; */
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+}
+
+.flex__container.flex--active {
+	z-index: 2;
+}
+
+.slider__navi {
+	position: absolute;
+	right: 20px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	z-index: 999;
+}
+
+.flex__item {
+	/* height: 30vh; */
+	color: #fff;
+	transition: transform 0.1s linear;
+}
+
+
+.flex__item--upper {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 200px;
+	transform-origin: left bottom;
+	transition: transform 0.1s linear 0.4s;
+	opacity: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.flex__item--down {
+	width: 100%;
+	transform-origin: right center;
+	transition: transform 0.1s linear 0s;
+    opacity: 0;
+    height: inherit;
+}
+
+.flex--preStart .flex__item--upper,
+.flex--preStart .flex__item--down,
+.flex--active .flex__item--upper,
+.flex--active .flex__item--down {
+	opacity: 1;
+}
+
+.flex--teachers .flex__item--upper {
+	background: #3e9fe6;
+}
+
+.flex--teachers .flex__item--down {
+	background: #d3eaef;
+}
+
+.flex--students .flex__item--upper {
+	background: pink;
+}
+
+.flex--students .flex__item--down {
+	background: #f4ecc5;
+}
+
+.flex__content {
+	/* margin-left: 80px;
+	width: 55%; */
+	opacity: 1;
+	transform: translate3d(0,0,0);
+	transition: transform 0.2s linear 0.2s, opacity 0.1s linear 0.2s;
+}
+
+.flex__container.animate--start .flex__content {
+	transform: translate3d(0,-200%,0);
+	opacity: 0;
+}
+
+
+.flex__container.animate--end .flex__item--upper {
+	transform: scaleY(0);
+}
+
+.flex__container.animate--end .flex__item--down {
+	transform: scaleX(0);
+}
+
+.flex__container.animate--end .flex__content {
+	transform: translate3d(0,200%,0);
+	opacity: 0;
+}
