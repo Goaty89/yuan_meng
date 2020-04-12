@@ -32,17 +32,33 @@
 .slider__navi {
 	position: absolute;
 	right: 20px;
-	transform: translateY(-50%);
+	/* transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
+	-o-transform: translateY(-50%); */
 	z-index: 999;
+}
+
+.slider__navi button {
+    display: block;
+    margin: 20px 0;
+    /* text-indent: -9999px; */
+    box-shadow: none;
+    border: none;
+    background: rgba(0,0,0,0.2);
+    cursor: pointer;
+    padding: 9px;
+    transition: margin 2s, opacity 1s ease;
+    color: #f3f0ec;
+}
+
+.slider__navi button.active {
+	display: none;
 }
 
 .flex__item {
 	/* height: 30vh; */
-	color: #fff;
 	transition: transform 0.1s linear;
 }
 
@@ -72,6 +88,7 @@
 	transition: transform 0.1s linear 0s;
     opacity: 0;
     height: inherit;
+    position: relative;
 }
 
 .flex--preStart .flex__item--upper,
@@ -82,19 +99,66 @@
 }
 
 .flex--teachers .flex__item--upper {
-	background: #3e9fe6;
+	background: #e6122f;
+}
+
+.flex--teachers .flex__item--upper h2 span:first-of-type {
+    background: linear-gradient(0deg, #000, transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.flex--teachers .flex__item--upper h2 span:nth-of-type(2) {
+    font-size: 16px;
+    font-family: monospace;
+    color: #f5dc8e;
+    word-spacing: 5px;
+    letter-spacing: 10px;
+    font-weight: 100;
+    margin: 9px 0;
+}
+
+.flex--teachers .flex__item--upper h2 .sifu--phase {
+    font-family: LiXuKeShuFa;
+    padding-left: 35px;
+    margin: 0 auto;
+    font-weight: 300;
+    letter-spacing: 30px;
+    font-size: .725rem;
+    border-top: .4px solid;
+    border-bottom: .4px solid;
+    width: 60%;
+    color: #000;
 }
 
 .flex--teachers .flex__item--down {
-	background: #d3eaef;
+	background: #0e3b51;
 }
 
 .flex--students .flex__item--upper {
-	background: pink;
+	background: #fa4a17;
+}
+
+.flex--students .flex__item--upper h2 span:first-of-type {
+    background: linear-gradient(0deg, #f7d981d1, transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.flex--students .flex__item--upper h2 span:nth-of-type(2) {
+    font-size: 16px;
+    font-family: monospace;
+    word-spacing: 5px;
+    letter-spacing: 10px;
+    font-weight: 100;
+    margin: 9px 0;
+    color: #fff;
 }
 
 .flex--students .flex__item--down {
-	background: #f4ecc5;
+	background: #f1c9d1;
 }
 
 .flex__content {

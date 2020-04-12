@@ -58,10 +58,6 @@ header {
     background-size: cover;
 }
 
-#page--contact {
-    background: #ff750061;
-}
-
 #title--gallery {
     background: url('../images/fixed_bg_3.jpg') fixed no-repeat 100px center;
     background-size: cover;
@@ -71,12 +67,20 @@ header {
 
 @media (min-width: 400px) {
     @font-face {
-        font-family:"mySpecialFont";
+        font-family:"MaoMeiMei";
         src: url("../fonts/MaoMeiMei-2.ttf") format("truetype");
+    }
+    @font-face {
+        font-family: "LiXuKeShuFa";
+        src: url("../fonts/LiXuKeShuFa-1.ttf") format("truetype");
     }
 
     html {
         font-size: 16px;
+    }
+
+    body {
+        background-color: #fff2e6;
     }
 
     header {
@@ -102,7 +106,7 @@ header {
         margin: 0;
         padding: 0;
         font-weight: 100;
-        font-family: mySpecialFont;
+        font-family: MaoMeiMei;
     }
 
     h2.title--EN {
@@ -196,28 +200,24 @@ header {
 
     #page--gallery h2 span {
         display: block;
-        word-spacing: 1rem;
-        font-size: 26px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #page--gallery h2 span:first-of-type {
         font-family: 'Meddon', cursive;
         font-size: 3.125rem;
-        background: linear-gradient(0deg, black, transparent);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        padding: 0 30px;
     }
 
     #page--gallery h2 .years-since {
-        padding: 0 30px;
-        margin: 0;
+        padding-left: 35px;
+        margin: 0 auto;
+        border-top: .4px solid;
+        border-bottom: .4px solid;
+        width: 60%;
         font-family: monospace;
         font-weight: 300;
         letter-spacing: 10px;
-        font-size: .725rem;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
+        font-size: .725rem;        
         font-style: italic;
         text-align: center;
     }
@@ -332,4 +332,92 @@ header {
         }
     }
 
+    .contact--wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .contact--wrapper::after {
+        content: '';
+        background-image: url(../images/office_bg.jpeg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+        min-width: 300px;
+        opacity: 0.1;
+        position: absolute;
+        height: inherit;
+        background-position: center;
+    }
+
+    .contact--wrapper h2 {
+        font-family: fantasy;
+        font-size: 3rem;
+    }
+    
+    .contact--office {
+        background-image: url(../images/office_bg.jpeg);
+        background-color: #5b1111;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 300px;
+        min-width: 300px;
+        height: 400px;
+        /* background-blend-mode: luminosity; */
+    }
+
+    pre {
+        white-space: pre-line;
+    }
+
+    .contact--details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 1rem;
+        background-color: #fff;
+    }
+
+    .box {
+        width: 300px;
+        margin: 0 auto;
+        padding: 5px;
+        background-color: #eaab00; /* gold */
+        /* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
+        /* background-image: gold, gold, white */
+        background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+        url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+        background-repeat: no-repeat;
+        background-size: 0 2px, 0 100%, 0% 2px;
+        background-position: top center, top center, bottom center;
+        -webkit-animation: drawBorderFromCenter 4s;
+    }
+
+    /* Chrome, Safari, Opera */
+    @-webkit-keyframes drawBorderFromCenter {
+        0% {
+        background-size: 0 2px, 0 0, 100% 100%;
+        }
+        20% {
+        background-size: 100% 2px, 100% 0, 100% 100%;
+        }
+        66%
+        {
+        background-size: 100% 2px, 100% 98%, 100% 100%;
+        }
+        99%
+        {
+        background-size: 100% 2px, 100% 98%, 0 2px;
+        }
+    }
+
+    .contact--schedule {
+        text-align: center;
+    }
 }
