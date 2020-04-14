@@ -373,6 +373,8 @@ header {
 
     pre {
         white-space: pre-line;
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
     }
 
     .contact--details {
@@ -382,6 +384,8 @@ header {
         position: relative;
         padding: 1rem;
         background-color: #fff;
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
     }
 
     .box {
@@ -396,7 +400,8 @@ header {
         background-repeat: no-repeat;
         background-size: 0 2px, 0 100%, 0% 2px;
         background-position: top center, top center, bottom center;
-        -webkit-animation: drawBorderFromCenter 4s;
+        -webkit-animation: drawBorderFromCenter 4s infinite;
+        animation: drawBorderFromCenter 4s infinite;
     }
 
     /* Chrome, Safari, Opera */
@@ -419,5 +424,29 @@ header {
 
     .contact--schedule {
         text-align: center;
+    }
+    
+    .contact--details label {
+        border: 3px solid rgb(218, 165, 32);
+        padding: 5px 10px;
+        font-weight: 500;
+        font-family: monospace;
+        text-transform: uppercase;
+        color: #979090;
+    }
+
+    #phone-num{
+        font-family: initial;
+    }
+
+    .contact--address {
+        display: flex;
+        margin: 1rem 0 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #address-info {
+        margin: 1rem 0;
     }
 }

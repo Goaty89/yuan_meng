@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="stylesheet" type="text/css" href="./css/slider.css">
     <link rel="stylesheet" type="text/css" href="./css/sliderCube.css">
+    <link rel="stylesheet" type="text/css" href="./css/fontawesomeIcon.css">
     <script
         src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
@@ -118,16 +121,29 @@
                     <div class="box">
                         <div class="contact--details">
                             <div class="contact--schedule">
-                                <label for="time-schdule">schedule:</label>
-                                <p id="time-schdule">
-                                    Monday-Friday  8am - 8pm
-                                </p>
+                                <label for="time-schdule">
+                                    <!-- <i class="fas fa-user-clock"></i> -->
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="palette" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-palette fa-w-16 fa-3x"><g class="fa-group"><path fill="currentColor" d="M204.29 5c-99.4 19.4-179.5 99.29-199.1 198.4-37 187 131.7 326.39 258.8 306.69 41.2-6.4 61.4-54.59 42.5-91.69-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.31C511.49 97.13 368.09-26.87 204.29 5zM96 320a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm32-128a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm128-64a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm128 64a32 32 0 1 1 32-32 32 32 0 0 1-32 32z" class="fa-secondary"></path><path fill="currentColor" d="M96 256a32 32 0 1 0 32 32 32 32 0 0 0-32-32zm32-128a32 32 0 1 0 32 32 32 32 0 0 0-32-32zm128-64a32 32 0 1 0 32 32 32 32 0 0 0-32-32zm128 64a32 32 0 1 0 32 32 32 32 0 0 0-32-32z" class="fa-primary"></path></g></svg>
+                                    Schedule
+                                </label>
+                                <div id="time-schdule">
+                                    <p>Saturaday  3pm  - 4.30pm</p>
+                                    <p>Sunday     10am - 11.30am</p>
+                                </div>
                             </div>
                             <div class="contact--mobile">
-                                Tel: 01612345678
+                                <label for="phone-num">
+                                    <svg style="--fa-primary-opacity: 0.20" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="mobile-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-mobile-alt fa-w-10 fa-3x"><g class="fa-group"><path fill="currentColor" d="M272 0H48A48 48 0 0 0 0 48v416a48 48 0 0 0 48 48h224a48 48 0 0 0 48-48V48a48 48 0 0 0-48-48zM160 480a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm112-108a12 12 0 0 1-12 12H60a12 12 0 0 1-12-12V60a12 12 0 0 1 12-12h200a12 12 0 0 1 12 12z" class="fa-secondary"></path><path fill="currentColor" d="M272 372a12 12 0 0 1-12 12H60a12 12 0 0 1-12-12V60a12 12 0 0 1 12-12h200a12 12 0 0 1 12 12z" class="fa-primary"></path></g></svg>
+                                    Tel
+                                </label>
+                                <p id="phone-num">+60 16-9638008</p>
                             </div>
                             <div class="contact--address">
-                                <pre>
+                                <label for="address-info">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-home fa-w-18 fa-3x"><g class="fa-group"><path fill="currentColor" d="M336 463.59V368a16 16 0 0 0-16-16h-64a16 16 0 0 0-16 16v95.71a16 16 0 0 1-15.92 16L112 480a16 16 0 0 1-16-16V300.06l184.39-151.85a12.19 12.19 0 0 1 15.3 0L480 300v164a16 16 0 0 1-16 16l-112-.31a16 16 0 0 1-16-16.1z" class="fa-secondary"></path><path fill="currentColor" d="M573.32 268.35l-25.5 31a12 12 0 0 1-16.9 1.65L295.69 107.21a12.19 12.19 0 0 0-15.3 0L45.17 301a12 12 0 0 1-16.89-1.65l-25.5-31a12 12 0 0 1 1.61-16.89L257.49 43a48 48 0 0 1 61 0L408 116.61V44a12 12 0 0 1 12-12h56a12 12 0 0 1 12 12v138.51l83.6 68.91a12 12 0 0 1 1.72 16.93z" class="fa-primary"></path></g></svg>
+                                    Address
+                                </label>
+                                <pre id="address-info">
                                     No1, Jalan tak tau,
                                     Simpang sini, 
                                     50100, Kuantan, 
