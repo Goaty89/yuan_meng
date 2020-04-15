@@ -19,7 +19,7 @@
 }
 
 .fa-home .fa-primary {
-    animation: fadeOut 5s infinite;
+    
 }
 
 .fa-mobile-alt {
@@ -56,7 +56,9 @@
 
 @keyframes fadeOut {
     0%   {opacity: 1;}
-    25%  {opacity: .3;}
-    50%  {opacity: .5;}
+    20%  {opacity: .7;}
+    40%  {opacity: .4;}
+    60%  {opacity: .1;}
+    80%  {opacity: .5;}
     100% {opacity: .7;}
 }
