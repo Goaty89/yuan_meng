@@ -172,7 +172,6 @@ header {
         border-image-slice: 1;
         color: #000000;
         font-family: 'Dancing Script', cursive;
-        box-shadow: 0 10px 10px -10px #b4b1a1;
     }
 
     .nav--list li a.active {

@@ -11,10 +11,12 @@
     <link rel="stylesheet" type="text/css" href="./css/slider.css">
     <link rel="stylesheet" type="text/css" href="./css/sliderCube.css">
     <link rel="stylesheet" type="text/css" href="./css/fontawesomeIcon.css">
+    <link rel="stylesheet" type="text/css" href="./css/slider-button.css">
     <script
         src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
         crossorigin="anonymous"></script>
+    <script src="./js/anime.min.js"></script>
     <title>圆梦</title>
 </head>
 <body>
@@ -106,8 +108,14 @@
                     </div>
                     <!-- slider content end -->
                     <div class="slider__navi">
-                        <button class="slide-nav active" data-slide="1">Student</button>
-                        <button class="slide-nav" data-slide="2">Teacher</button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="105" height="100" viewBox="0 0 105 100" preserveAspectRatio="xMinYMin" class="slider__toggle">
+                            <rect onclick="goTo(0)" class="slider__box" x="45" y="15" width="30" height="30"></rect>
+                            <circle cx="60" cy="30" r="5"></circle>
+                            <rect onclick="goTo(1)" class="slider__box" x="75" y="15" width="30" height="30"></rect>
+                            <circle cx="90" cy="30" r="5"></circle>
+                          </svg>
+                        <!-- <button class="slide-nav active" data-slide="1">Student</button>
+                        <button class="slide-nav" data-slide="2">Teacher</button> -->
                     </div>
                 </div>
             </section>

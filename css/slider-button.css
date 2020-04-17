@@ -1,0 +1,25 @@
+
+.slider__navi {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+.slider__toggle circle {
+    fill: #e0e0e0;
+    pointer-events: none;
+  }
+  
+  .slider__toggle path {
+    pointer-events: none;
+  }
+  .slider__box {
+    fill: #fff;
+    cursor: pointer;
+  }
+  
+  .slider__box:hover {
+    fill: #f2f2f2;
+  }
