@@ -4,8 +4,8 @@ var button_overlay = [
       {id: 'path5200', d: 'm 67,23 0,14.1 -14.1,-14.1 z', fill: '#eec16e'},
     ],
     [
-      {id: '#path4604', d: 'm 82.987578,22.987654 0,14.024692 14.012422,-14.024692 z', fill: '#c63f2b'},
-      {id: '#path5200', d: 'm 82.9,37.012346 14.1,0.08765 0,-14.2 z', fill: '#c63f2b'},
+      {id: '#path4604', d: 'm 82.987578,22.987654 0,14.024692 14.012422,-14.024692 z', fill: '#8be480'},
+      {id: '#path5200', d: 'm 82.9,37.012346 14.1,0.08765 0,-14.2 z', fill: '#8be480'},
     ],
     [
       {id: '#path4604', d: 'm 52.987578,37.012422 0,-14.012422 14.012422,14.012422 z', fill: '#eec16e'},
@@ -104,7 +104,7 @@ var button_overlay = [
       play(index);
       curIndex = index;
       clearTimeout(timeId);
-      timeId = setTimeout(slideshow, slideTimeout);
+      //timeId = setTimeout(slideshow, slideTimeout);
     }
     
     function restartAnimation(index) {

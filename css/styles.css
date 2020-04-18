@@ -382,10 +382,11 @@ header {
         align-items: center;
         position: relative;
         padding: 1rem;
-        background-color: #d9a2635c;
+        background-color: #ead3b8b5;
         text-align: center;
         font-weight: 600;
         font-family: 'Dancing Script', cursive;
+        z-index: 1;
     }
 
     .contact--details>div {
