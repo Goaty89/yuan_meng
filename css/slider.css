@@ -60,13 +60,13 @@
 	transition: transform 0.3s linear 0s;
     opacity: 0;
     height: inherit;
-    position: relative;
+	position: relative;
+	overflow: hidden;
+	position: relative;
 }
 
 .flex__container:last-child .flex__item--down {
 	transform-origin: left center;
-	overflow: hidden;
-	position: relative;
 }
 
 .flex--preStart .flex__item--upper,

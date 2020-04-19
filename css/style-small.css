@@ -7,13 +7,11 @@ article {
 }
 #title--gallery {
     background: url(../images/fixed_bg_3.jpg) fixed no-repeat;
-    background-attachment: scroll;
     background-size: cover;
     background-position: 50% center;
 }
 #title--contact {
     background: url(../images/fixed_bg_1.jpg) fixed no-repeat;
-    background-attachment: scroll;
     background-size: cover;
     background-position: 50% center;
 }
@@ -158,7 +156,6 @@ header {
 #page--introduction {
     background-size: cover;
     background-position: 36%;
-    background-attachment: scroll;
 }
 
 h1.title--CH {
