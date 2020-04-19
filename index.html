@@ -3,39 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="./css/sliderCube.css">
+    <link rel="stylesheet" type="text/css" href="./css/fontawesomeIcon.css">
+    <link rel="stylesheet" type="text/css" href="./css/slider-button.css">
+    <link rel="stylesheet" media="(min-width:601px)" href="./css/style-large.css">
+    <link rel="stylesheet" media="(max-width:600px)" href="./css/style-small.css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./js/anime.min.js"></script>
     <title>圆梦</title>
 </head>
 <body>
     <article>
-        <header>
-            <nav id="page-nav">
-                <div class="logo-wrapper">
-                    <span class="logo image"></span>
-                </div>
-                <div class="navigation">
-                    <label for="hamburger">&#9776;</label>
-                    <input type="checkbox" id="hamburger"/>
-                    <ul class="nav--list">
-                        <li><a href="#page--introduction">Introduction</a></li>
-                        <li><a href="#page--gallery">Gallery</a></li>
-                        <li><a href="#page--contact">Contact us</a></li>
-                    </ul>
-                </div>
+        <header class="header">
+            <div class="logo-wrapper">
+                <span class="logo image"></span>
+            </div>
+            <nav id="page-nav" class="navigation">
+                <!-- <label for="hamburger">&#9776;</label> -->
+                <input type="checkbox" id="hamburger"/>
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul class="nav--list">
+                    <li><a href="#page--introduction" class="active">Introduction</a></li>
+                    <li><a href="#page--gallery">Gallery</a></li>
+                    <li><a href="#page--contact">Contact us</a></li>
+                </ul>
             </nav>
+            <div class="header--tail">
+                YUAN MENG ART STUDIO&copy;2020 by Charles Yong
+            </div>
         </header>
         <main>
-            <section id="page--introduction" class="full-content">
+            <section id="page--introduction" class="full-content title--wrapper">
+                <h1 class="title--CH">关丹圆梦画室</h1>
+                <h2 class="title--EN">
+                    KUANTAN YUAN MENG ART STUDIO
+                </h2>
+                <h3 class="title--since">SINCE 2008</h3>
+
+                <div class="intro">
+                    Teacher was born in 1953. He has more than 30 years of experience and is proficient in caligraphy, painting, chinese ink painting, oil painting, sketching, etc. The art class currently enrolls preschool and junior high school students.
+                </div>
+            </section>
+            <section id="title--gallery" class="full-content section--bg-fixed page--title">
                 
             </section>
-            <section id="page--gallery" class="full-content">
-
+            <section id="page--gallery" class="full-content">                
+                <div id="slider">
+                    <!-- slider content -->
+                    <div class="slider__warpper">
+                        <div class="flex__container flex--students flex--active" data-slide="1">
+                            <div class="flex__item flex__item--upper">
+                                <div class="flex__content">
+                                    <h2>
+                                        <span>Gallery</span>
+                                        <span>STUDENT'S ARTWORK</span>
+                                        <span class="years-since">2017 - 2019</span>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="flex__item flex__item--down">
+                                <div class="entire-content">
+                                    <div class="content-carrousel">
+                                        <figure class="shadow"><img src="./images/artWork/artwork_1.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_2.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_3.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_4.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_5.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_6.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_7.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_8.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_9.jpeg"/></figure>
+                                        <figure class="shadow"><img src="./images/artWork/artwork_10.jpeg"/></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex__container flex--teachers animate--start" data-slide="2">
+                            <div class="flex__item flex__item--upper">
+                                <div class="flex__content">
+                                    <h2>
+                                        <span>Gallery</span>
+                                        <span>TEACHER'S ARTWORK</span>
+                                        <span class="sifu--phase">师傅作品</span>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="flex__item flex__item--down">
+                                <div class="slider--cube">
+                                    <div class="container--cube">
+                                      <div class="slide x"></div>
+                                      <div class="slide y"></div>
+                                      <div class="slide z"></div>
+                                    </div>
+                                    <div class="slider--cube--shadow"></div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider content end -->
+                    <div class="slider__navi">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="105" height="100" viewBox="0 0 105 100" preserveAspectRatio="xMinYMin" class="slider__toggle">
+                            <rect onclick="goTo(0)" class="slider__box" x="45" y="15" width="30" height="30"></rect>
+                            <circle cx="60" cy="30" r="7"></circle>
+                            <rect onclick="goTo(1)" class="slider__box" x="75" y="15" width="30" height="30"></rect>
+                            <circle cx="90" cy="30" r="7"></circle>
+                          </svg>
+                        <!-- <button class="slide-nav active" data-slide="1">Student</button>
+                        <button class="slide-nav" data-slide="2">Teacher</button> -->
+                    </div>
+                </div>
             </section>
-            <section id="page--contact" class="full-content">
-
+            <section id="title--contact" class="full-content section--bg-fixed page--title">
+                
+            </section>
+            <section id="page--contact" class="">
+                <iframe width="100%" height="200px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJGXt0XuK6yDERB9vXrjYAOjQ&key=AIzaSyBmU9bz8zveLjyH9olgZjFksctf_HK0R1I" allowfullscreen></iframe>
+                <div class="contact--wrapper">
+                    <h2>CONTACT US</h2>
+                    <div class="box">
+                        <div class="contact--details">
+                            <div class="contact--schedule">
+                                <label for="time-schdule">
+                                    <!-- <i class="fas fa-user-clock"></i> -->
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="palette" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-palette fa-w-16 fa-3x"><g class="fa-group"><path fill="currentColor" d="M204.29 5c-99.4 19.4-179.5 99.29-199.1 198.4-37 187 131.7 326.39 258.8 306.69 41.2-6.4 61.4-54.59 42.5-91.69-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.31C511.49 97.13 368.09-26.87 204.29 5zM96 320a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm32-128a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm128-64a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm128 64a32 32 0 1 1 32-32 32 32 0 0 1-32 32z" class="fa-secondary"></path><path fill="currentColor" d="M96 256a32 32 0 1 0 32 32 32 32 0 0 0-32-32zm32-128a32 32 0 1 0 32 32 32 32 0 0 0-32-32zm128-64a32 32 0 1 0 32 32 32 32 0 0 0-32-32zm128 64a32 32 0 1 0 32 32 32 32 0 0 0-32-32z" class="fa-primary"></path></g></svg>
+                                    Schedule
+                                </label>
+                                <div id="time-schdule">
+                                    <p>Saturaday  3pm  - 4.30pm</p>
+                                    <p>Sunday     10am - 11.30am</p>
+                                </div>
+                            </div>
+                            <div class="contact--mobile">
+                                <label for="phone-num">
+                                    <svg style="--fa-primary-opacity: 0.20" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="mobile-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-mobile-alt fa-w-10 fa-3x"><g class="fa-group"><path fill="currentColor" d="M272 0H48A48 48 0 0 0 0 48v416a48 48 0 0 0 48 48h224a48 48 0 0 0 48-48V48a48 48 0 0 0-48-48zM160 480a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm112-108a12 12 0 0 1-12 12H60a12 12 0 0 1-12-12V60a12 12 0 0 1 12-12h200a12 12 0 0 1 12 12z" class="fa-secondary"></path><path fill="currentColor" d="M272 372a12 12 0 0 1-12 12H60a12 12 0 0 1-12-12V60a12 12 0 0 1 12-12h200a12 12 0 0 1 12 12z" class="fa-primary"></path></g></svg>
+                                    Tel
+                                </label>
+                                <p id="phone-num">+60 16-9638008</p>
+                            </div>
+                            <div class="contact--address">
+                                <label for="address-info">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-home fa-w-18 fa-3x"><g class="fa-group"><path fill="currentColor" d="M336 463.59V368a16 16 0 0 0-16-16h-64a16 16 0 0 0-16 16v95.71a16 16 0 0 1-15.92 16L112 480a16 16 0 0 1-16-16V300.06l184.39-151.85a12.19 12.19 0 0 1 15.3 0L480 300v164a16 16 0 0 1-16 16l-112-.31a16 16 0 0 1-16-16.1z" class="fa-secondary"></path><path fill="currentColor" d="M573.32 268.35l-25.5 31a12 12 0 0 1-16.9 1.65L295.69 107.21a12.19 12.19 0 0 0-15.3 0L45.17 301a12 12 0 0 1-16.89-1.65l-25.5-31a12 12 0 0 1 1.61-16.89L257.49 43a48 48 0 0 1 61 0L408 116.61V44a12 12 0 0 1 12-12h56a12 12 0 0 1 12 12v138.51l83.6 68.91a12 12 0 0 1 1.72 16.93z" class="fa-primary"></path></g></svg>
+                                    Address
+                                </label>
+                                <pre id="address-info">
+                                    No1, Jalan tak tau,
+                                    Simpang sini, 
+                                    50100, Kuantan, 
+                                    Pahang
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer></footer>
     </article>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 </html>

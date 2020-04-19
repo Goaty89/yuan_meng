@@ -1,0 +1,29 @@
+
+.slider__navi {
+  align-items: center;
+  display: flex;
+  max-width: 960px;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 999;
+}
+
+.slider__toggle circle {
+    fill: #e0e0e0;
+    pointer-events: none;
+  }
+  
+  .slider__toggle path {
+    pointer-events: none;
+  }
+  .slider__box {
+    fill: #fff;
+    cursor: pointer;
+  }
+  
+  .slider__box:hover {
+    fill: #f2f2f2;
+  }

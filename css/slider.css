@@ -1,0 +1,200 @@
+#slider {
+    width: 100%;
+    position: relative;
+}
+
+.flex__container {
+	position: absolute;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+    display: -ms-flex;
+    flex-direction: column;
+	/* -webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap;  */
+	/* -webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center; */
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+}
+
+.flex__container.flex--active {
+	z-index: 2;
+}
+
+.flex__item {
+	/* height: 30vh; */
+	transition: transform 0.1s linear;
+}
+
+
+.flex__item--upper {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 200px;
+	transform-origin: left bottom;
+	transition: transform 0.1s linear 0.4s;
+	opacity: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.flex__item--down {
+	width: 100%;
+	transform-origin: right center;
+	transition: transform 0.3s linear 0s;
+    opacity: 0;
+    height: inherit;
+    position: relative;
+}
+
+.flex__container:last-child .flex__item--down {
+	transform-origin: left center;
+}
+
+.flex--preStart .flex__item--upper,
+.flex--preStart .flex__item--down,
+.flex--active .flex__item--upper,
+.flex--active .flex__item--down {
+	opacity: 1;
+}
+
+.flex--teachers .flex__item--upper {
+	background: #e6122f;
+}
+
+ #page--gallery h2 {
+    margin: 0;
+    text-align: center;
+}
+
+#page--gallery h2 span {
+    display: block;
+}
+/*
+#page--gallery h2 span:first-of-type {
+
+} */
+
+#page--gallery h2 .years-since {
+    padding-left: 35px;
+    margin: 0 auto;
+    border-top: .4px solid;
+    border-bottom: .4px solid;
+    width: 60%;
+    font-family: monospace;
+    font-weight: 300;
+    letter-spacing: 10px;
+    font-size: .725rem;        
+    font-style: italic;
+    text-align: center;
+}
+
+.flex--teachers .flex__item--upper h2 span:first-of-type {
+    background: linear-gradient(0deg, #000, transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Meddon', cursive;
+    font-size: 3.125rem;
+    padding: 0 30px;
+}
+
+.flex--teachers .flex__item--upper h2 span:nth-of-type(2) {
+    font-size: 16px;
+    font-family: monospace;
+    color: #f5dc8e;
+    word-spacing: 5px;
+    letter-spacing: 10px;
+    font-weight: 100;
+	margin: 9px 0;
+	padding: 0 30px;
+}
+
+.flex--teachers .flex__item--upper h2 .sifu--phase {
+    font-family: LiXuKeShuFa;
+    padding-left: 35px;
+    margin: 0 auto;
+    font-weight: 300;
+    letter-spacing: 30px;
+    font-size: .725rem;
+    border-top: .4px solid;
+    border-bottom: .4px solid;
+    width: 60%;
+    color: #000;
+}
+
+.flex--teachers .flex__item--down {
+	background: #0e3b51;
+}
+
+.flex--students .flex__item--upper {
+	background: #bb350f;
+}
+
+.flex--students .flex__item--upper h2 span:first-of-type {
+    background: linear-gradient(0deg, #f7d981d1, transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Meddon', cursive;
+    font-size: 3.125rem;
+    padding: 0 30px;
+}
+
+.flex--students .flex__item--upper h2 span:nth-of-type(2) {
+    font-size: 16px;
+    font-family: monospace;
+    word-spacing: 5px;
+    letter-spacing: 10px;
+    font-weight: 100;
+    margin: 9px 0;
+	color: #fff;
+	padding: 0 30px;
+}
+
+.flex--students .flex__item--down {
+	background: #5d0521;
+}
+
+.flex__content {
+	/* margin-left: 80px;
+	width: 55%; */
+	opacity: 1;
+	transform: translate3d(0,0,0);
+	transition: transform 0.2s linear 0.2s, opacity 0.1s linear 0.2s;
+}
+
+.flex__container.animate--start .flex__content {
+	transform: translate3d(0,-200%,0);
+	opacity: 0;
+}
+
+
+.flex__container.animate--end .flex__item--upper {
+	transform: scaleY(0);
+}
+
+.flex__container.animate--end .flex__item--down {
+	transform: scaleX(0);
+}
+
+.flex__container.animate--end .flex__content {
+	transform: translate3d(0,200%,0);
+	opacity: 0;
+}

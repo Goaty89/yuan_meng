@@ -1,0 +1,138 @@
+
+html {
+    font-size: 81.3%;
+}
+
+body {
+    background-color: #2905542b;
+}
+
+.logo {
+    width: 18.75rem;
+    height: 18.75rem;
+}
+
+article {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    justify-content: space-between;
+    background: #fff;
+}
+
+h1.title--CH {
+    font-size: 3rem;
+    color: #e6c696;
+    font-weight: 100;
+}
+
+h2.title--EN {
+    color: #e6c696;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    font-weight: 300;
+    letter-spacing: 10px;
+    font-size: 1rem;
+}
+
+h3.title--since {
+    color: #e6c696;
+    padding: 0 30px;
+    margin: 1rem 0 0;
+    font-family: monospace;
+    font-weight: 300;
+    letter-spacing: 10px;
+    font-size: .725rem;
+}
+
+.intro {
+    width: 50%;
+
+}
+
+.logo-wrapper, .navigation, .header--tail{
+    flex: 1;
+}
+.header--tail {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.725rem;
+    justify-content: center;
+}
+main {
+    width: calc(100% - 300px);
+    height: 100%;
+    padding-left: 300px;
+}
+.nav--list {
+    padding:0 10px;
+}
+
+.nav--list li a{
+    padding: 1rem 0;
+    display: block;
+    border-bottom: 1px dotted;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-image-source: linear-gradient(to left, #d2bee48a,#e6bd28);
+    border-width: 5px;
+    border-image-slice: 1;
+    color: #000000;
+    font-family: 'Dancing Script', cursive;
+}
+
+.nav--list li a.active {
+    border-image-source: linear-gradient(to right, #d2bee48a,#e6bd28);
+}
+
+#page-nav label, #hamburger {
+    display: none;
+}
+
+.section--bg-fixed {
+    background-attachment: fixed;
+}
+
+/* 3D gallery */
+#page--gallery {
+    background-color: pink;
+    display: flex;
+}
+
+#page--gallery h2 {
+    margin: 0;
+    text-align: center;
+}
+
+#page--gallery h2 span {
+    display: block;
+}
+
+#page--gallery h2 span:first-of-type {
+    font-family: 'Meddon', cursive;
+    font-size: 3.125rem;
+    padding: 0 30px;
+}
+
+#page--gallery h2 .years-since {
+    padding-left: 35px;
+    margin: 0 auto;
+    border-top: .4px solid;
+    border-bottom: .4px solid;
+    width: 60%;
+    font-family: monospace;
+    font-weight: 300;
+    letter-spacing: 10px;
+    font-size: .725rem;        
+    font-style: italic;
+    text-align: center;
+}
+
