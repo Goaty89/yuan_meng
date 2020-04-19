@@ -122,7 +122,7 @@
     font-family: monospace;
     color: #f5dc8e;
     word-spacing: 5px;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     font-weight: 100;
 	margin: 9px 0;
 	padding: 0 30px;
@@ -163,7 +163,7 @@
     font-size: 16px;
     font-family: monospace;
     word-spacing: 5px;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     font-weight: 100;
     margin: 9px 0;
 	color: #fff;
