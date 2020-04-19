@@ -10,6 +10,11 @@ article {
     background-size: cover;
     background-position: 50% center;
 }
+#title--gallery {
+    background: url(../images/fixed_bg_3.jpg) fixed no-repeat;
+    background-size: cover;
+    background-position: 50% center;
+}
 #title--contact {
     background: url(../images/fixed_bg_1.jpg) fixed no-repeat;
     background-size: cover;
@@ -27,7 +32,7 @@ article {
 }
 
 .full-content {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     scroll-margin-top: 80px;
 }
 
@@ -57,8 +62,8 @@ header {
 #page-nav input
 {
   display: block;
-  width: 40px;
-  height: 32px;
+  width: 50px;
+  height: 42px;
   position: absolute;
   top: -7px;
   left: -5px;
@@ -132,7 +137,7 @@ header {
     left: 0;
     width: 100%;
     height: 100vh;
-    margin: -45px 0 0 100px;
+    margin: -45px 0 0 50%;
     padding-top: 90px;
     background: #ededed;
     list-style-type: none;
@@ -147,7 +152,20 @@ header {
   padding: 10px 0;
   font-size: 22px;
 }
-
+.nav--list li a{
+    display: block;
+    border-bottom: 1px dotted;
+    width: 30%;
+    text-align: center;
+    border-image-source: linear-gradient(to left, #d2bee48a,#e6bd28);
+    border-width: 5px;
+    border-image-slice: 1;
+    color: #000000;
+    font-family: 'Dancing Script', cursive;
+}
+.nav--list li a.active {
+    border-image-source: linear-gradient(to right, #676fe294,#e1bdf7);
+}
 /*
  * And let's slide it in from the left
  */
@@ -198,5 +216,11 @@ h3.title--since{
     }
     #page--introduction {
         background-attachment: scroll;
+    }
+    .contact--wrapper h2 {
+        font-size: 1rem;
+    }
+    .contact--wrapper h2 {
+        font-size: 1rem;
     }
 }

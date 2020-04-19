@@ -53,7 +53,7 @@ header {
 }
 
 .full-content {
-    height: 100%;
+    min-height: 100%;
 }
 #page--introduction {
     background: url(../images/fixed-bg_surround.png) fixed no-repeat;
