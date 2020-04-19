@@ -15,11 +15,9 @@ article {
     background-size: cover;
     background-position: 50% center;
 }
-.wp-block-cover.has-parallax, .wp-block-cover-image.has-parallax {
-    @supports (-webkit-touch-callout: inherit) {
-      background-attachment: scroll;
-    }
-  }
+#page--contact {
+    background-color: #fff;
+}
 
 #page--gallery {
     /* display: none; */
@@ -157,10 +155,20 @@ header {
 {
   transform: none;
 }
-
 #page--introduction {
+    position: relative;
+    background: unset;
+}
+#page--introduction::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/fixed-bg_surround.png) no-repeat;
     background-size: cover;
-    background-position: 36%;
+    background-position: 30%;
+    background-color: #18066ad4;
+    z-index: -1;
 }
 
 h1.title--CH {
@@ -179,4 +187,16 @@ h3.title--since{
 
 .contact--wrapper h2 {
     font-size: 2rem;
+}
+
+@supports (-webkit-touch-callout: inherit) {
+    #title--gallery {
+        background-attachment: scroll;
+    }
+    #title--contact {
+        background-attachment: scroll;
+    }
+    #page--introduction {
+        background-attachment: scroll;
+    }
 }
