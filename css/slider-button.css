@@ -20,7 +20,8 @@
     pointer-events: none;
   }
   .slider__box {
-    fill: #fff;
+    /* fill: #fff; */
+    opacity: 0;
     cursor: pointer;
   }
   

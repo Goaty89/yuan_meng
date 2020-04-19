@@ -15,6 +15,11 @@ article {
     background-size: cover;
     background-position: 50% center;
 }
+.wp-block-cover.has-parallax, .wp-block-cover-image.has-parallax {
+    @supports (-webkit-touch-callout: inherit) {
+      background-attachment: scroll;
+    }
+  }
 
 #page--gallery {
     /* display: none; */
