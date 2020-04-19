@@ -65,6 +65,8 @@
 
 .flex__container:last-child .flex__item--down {
 	transform-origin: left center;
+	overflow: hidden;
+	position: relative;
 }
 
 .flex--preStart .flex__item--upper,
