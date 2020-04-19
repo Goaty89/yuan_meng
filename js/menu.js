@@ -11,3 +11,4 @@ function toggleActive(elem){
 navigations.forEach(function(link) {
     link.addEventListener("click", toggleActive, false);
 });
+

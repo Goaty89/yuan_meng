@@ -1,3 +1,11 @@
+@font-face {
+    font-family:"MaoMeiMei";
+    src: url("../fonts/MaoMeiMei-2.ttf") format("truetype");
+}
+@font-face {
+    font-family: "LiXuKeShuFa";
+    src: url("../fonts/LiXuKeShuFa-1.ttf") format("truetype");
+}
 html, body {
     padding: 0;
     margin: 0;
@@ -14,8 +22,8 @@ a {
     text-decoration: none;
 }
 
-article {
-    height: 100%;
+pre {
+    white-space: pre-line;
 }
 
 header {
@@ -29,19 +37,19 @@ header {
 
 .logo {
     background: url("../images/circle_gold.png") no-repeat;
-    width: 18.75rem;
-    height: 18.75rem;
     background-size: contain;
     margin: 0 10px;
     transition: all 1s ease;
+    width: 5rem;
+    height: 5rem;
 }
 
 .logo::after {
     content: '';
     background: url("../images/meng.gif") no-repeat;
-    width: 18.75rem;
-    height: 18.75rem;
     background-size: contain;
+    width: inherit;
+    height: inherit;
 }
 
 .full-content {
@@ -65,396 +73,253 @@ header {
     background-blend-mode: luminosity; */
 }
 
-@media (min-width: 400px) {
-    @font-face {
-        font-family:"MaoMeiMei";
-        src: url("../fonts/MaoMeiMei-2.ttf") format("truetype");
-    }
-    @font-face {
-        font-family: "LiXuKeShuFa";
-        src: url("../fonts/LiXuKeShuFa-1.ttf") format("truetype");
-    }
 
-    html {
-        font-size: 16px;
-    }
+.title--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    body {
-        background-color: #2905542b;
-    }
+h1.title--CH {
+    color: #e6c696;
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+    font-family: MaoMeiMei;
+}
 
-    header {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        height: 100%;
-        width: 300px;
-        justify-content: space-between;
-        background: #fff;
-    }
+h2.title--EN {
+    color: #e6c696;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    font-weight: 300;
+    letter-spacing: 10px;
+}
 
-    .title--wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+h3.title--since {
+    color: #e6c696;
+    padding: 0 30px;
+    margin: 1rem 0 0;
+    font-family: monospace;
+    font-weight: 300;
+    letter-spacing: 10px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    font-style: italic;
+}
 
-    h1.title--CH {
-        font-size: 3rem;
-        color: #e6c696;
-        margin: 0;
-        padding: 0;
-        font-weight: 100;
-        font-family: MaoMeiMei;
-    }
+.intro {
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1rem;
+    margin: 3rem;
+    text-align: center;
+    font-weight: 100;
+}
 
-    h2.title--EN {
-        color: #e6c696;
-        padding: 0;
-        margin: 0;
-        font-family: monospace;
-        font-weight: 300;
-        letter-spacing: 10px;
-        font-size: 1rem;
-    }
+.contact--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    h3.title--since {
-        color: #e6c696;
-        padding: 0 30px;
-        margin: 1rem 0 0;
-        font-family: monospace;
-        font-weight: 300;
-        letter-spacing: 10px;
-        font-size: .725rem;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        font-style: italic;
-    }
+.contact--wrapper::after {
+    content: '';
+    background-image: url(../images/office_bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    min-width: 300px;
+    opacity: 0.1;
+    position: absolute;
+    height: inherit;
+    background-position: center;
+}
 
-    .intro {
-        color: #fff;
-        font-family: 'Dancing Script', cursive;
-        font-size: 1rem;
-        width: 50%;
-        margin: 3rem;
-        text-align: center;
-        font-weight: 100;
-    }
+.contact--wrapper h2 {
+    font-family: fantasy;
+    font-size: 3rem;
+}
 
-    .logo-wrapper, .navigation, .header--tail{
-        flex: 1;
-    }
-    .header--tail {
-        display: flex;
-        align-items: flex-end;
-        font-size: 0.725rem;
-        justify-content: center;
-    }
-    main {
-        width: calc(100% - 300px);
-        height: 100%;
-        padding-left: 300px;
-    }
-    .nav--list {
-        padding:0 10px;
-    }
+.contact--office {
+    background-image: url(../images/office_bg.jpeg);
+    background-color: #5b1111;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    min-width: 300px;
+    height: 400px;
+    /* background-blend-mode: luminosity; */
+}
 
-    .nav--list li a{
-        padding: 1rem 0;
-        display: block;
-        border-bottom: 1px dotted;
-        width: 50%;
-        margin: 0 auto;
-        text-align: center;
-        border-image-source: linear-gradient(to left, #d2bee48a,#e6bd28);
-        border-width: 5px;
-        border-image-slice: 1;
-        color: #000000;
-        font-family: 'Dancing Script', cursive;
-    }
+pre {
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+}
 
-    .nav--list li a.active {
-        border-image-source: linear-gradient(to right, #d2bee48a,#e6bd28);
-    }
+.contact--details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+    background-color: #ead3b8b5;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+    z-index: 1;
+}
 
-    #page-nav label, #hamburger {
-        display: none;
-    }
+.contact--details>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
 
-    .section--bg-fixed {
-        background-attachment: fixed;
-    }
+.box {
+    width: 300px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #eaab00; /* gold */
+    /* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
+    /* background-image: gold, gold, white */
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+    url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+    background-repeat: no-repeat;
+    background-size: 0 2px, 0 100%, 0% 2px;
+    background-position: top center, top center, bottom center;
+    -webkit-animation: drawBorderFromCenter 15s infinite;
+    animation: drawBorderFromCenter 15s infinite;
+}
 
-    /* 3D gallery */
-    #page--gallery {
-        background-color: pink;
-        display: flex;
+/* Chrome, Safari, Opera */
+@-webkit-keyframes drawBorderFromCenter {
+    0% {
+    background-size: 0 2px, 0 0, 100% 100%;
     }
+    20% {
+    background-size: 100% 2px, 100% 0, 100% 100%;
+    }
+    66%
+    {
+    background-size: 100% 2px, 100% 98%, 100% 100%;
+    }
+    99%
+    {
+    background-size: 100% 2px, 100% 98%, 0 2px;
+    }
+}
 
-    #page--gallery h2 {
-        margin: 0;
-        text-align: center;
-    }
+.contact--schedule {
+    text-align: center;
+}
 
-    #page--gallery h2 span {
-        display: block;
-    }
+.contact--details label {
+    border: 3px solid rgb(218, 165, 32);
+    padding: 5px 10px;
+    font-weight: 600;
+    font-family: monospace;
+    text-transform: uppercase;
+    color: #fff;
+}
 
-    #page--gallery h2 span:first-of-type {
-        font-family: 'Meddon', cursive;
-        font-size: 3.125rem;
-        padding: 0 30px;
-    }
+#phone-num{
+    font-family: 'Dancing Script', cursive;
+}
 
-    #page--gallery h2 .years-since {
-        padding-left: 35px;
-        margin: 0 auto;
-        border-top: .4px solid;
-        border-bottom: .4px solid;
-        width: 60%;
-        font-family: monospace;
-        font-weight: 300;
-        letter-spacing: 10px;
-        font-size: .725rem;        
-        font-style: italic;
-        text-align: center;
-    }
-    
-    .slideshow-title {
-        font-family: 'Allerta Stencil';
-        font-size: 62px;
-        color: #fff;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 25%;
-        letter-spacing: 3px;
-        font-weight: 300;
-    }
-    
-    .sub-heading {
-        padding-top: 50px;
-        font-size: 18px;
-    } .sub-heading-two {
-        font-size: 15px;
-    } .sub-heading-three {
-        font-size: 13px;
-    } .sub-heading-four {
-        font-size: 11px;
-    } .sub-heading-five {
-        font-size: 9px;
-    } .sub-heading-six {
-        font-size: 7px;
-    } .sub-heading-seven {
-        font-size: 5px;
-    } .sub-heading-eight {
-        font-size: 3px;
-    } .sub-heading-nine {
-        font-size: 1px;
-    }
-    
-    .entire-content {
-        margin: 20vh auto;
-        width: 190px;
-        perspective: 1000px;
-        perspective-origin: top;
-        position: relative;
-        flex: 1;
-    }
-    
-    .content-carrousel {
-        width: 100%;
-        position: absolute;
-        float: right;
-        animation: rotar 15s infinite linear;
-        transform-style: preserve-3d;
-    }
-    
-    .content-carrousel:hover {
-        animation-play-state: paused;
-        cursor: pointer;
-    }
-    
-    .content-carrousel figure {
-        width: 100%;
-        height: 120px;
-        border: 1px solid #3b444b;
-        overflow: hidden;
-        position: absolute;
-    }
-    
-    .content-carrousel figure:nth-child(1) {
-        transform: rotateY(0deg) translateZ(300px); 
-    } .content-carrousel figure:nth-child(2) {
-        transform: rotateY(40deg) translateZ(300px); 
-    } .content-carrousel figure:nth-child(3) {
-        transform: rotateY(80deg) translateZ(300px); 
-    } .content-carrousel figure:nth-child(4) {
-        transform: rotateY(120deg) translateZ(300px); 
-    } .content-carrousel figure:nth-child(5) {
-        transform: rotateY(160deg) translateZ(300px); 
-    } .content-carrousel figure:nth-child(6) {
-        transform: rotateY(200deg) translateZ(300px); 
-    } .content-carrousel figure:nth-child(7) {
-        transform: rotateY(240deg) translateZ(300px); 
-    } .content-carrousel figure:nth-child(8) {
-        transform: rotateY(280deg) translateZ(300px); 
-    } .content-carrousel figure:nth-child(9) {
-        transform: rotateY(320deg) translateZ(300px); 
-    } .content-carrousel figure:nth-child(10) {
-        transform: rotateY(360deg) translateZ(300px); 
-    } 
-    
-    .shadow {
-        position: absolute;
-        box-shadow: 0px 0px 20px 0px #000;
-        border-radius: 1px;
-    }
-    
-    .content-carrousel img {
-        image-rendering: auto;
-        transition: all 300ms;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .content-carrousel img:hover {
-        transform: scale(1.2);
-        transition: all 300ms;
-    }
-    
-    @keyframes rotar {
-        from {
-            transform: rotateY(0deg);
-        } to {
-            transform: rotateY(360deg);
-        }
-    }
+.contact--address {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .contact--wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        position: relative;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+#address-info {
+    margin: 1rem 0;
+}
 
-    .contact--wrapper::after {
-        content: '';
-        background-image: url(../images/office_bg.jpeg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        width: 100%;
-        min-width: 300px;
-        opacity: 0.1;
-        position: absolute;
-        height: inherit;
-        background-position: center;
-    }
+.entire-content {
+    margin: 20vh 0 0;
+    width: 190px;
+    perspective: 2345px;
+    perspective-origin: top;
+    position: absolute;
+    LEFT: 50%;
+    transform: translate(-50%);
+}
 
-    .contact--wrapper h2 {
-        font-family: fantasy;
-        font-size: 3rem;
-    }
-    
-    .contact--office {
-        background-image: url(../images/office_bg.jpeg);
-        background-color: #5b1111;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 300px;
-        min-width: 300px;
-        height: 400px;
-        /* background-blend-mode: luminosity; */
-    }
+.content-carrousel {
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotar 15s infinite linear;
+    transform-style: preserve-3d;
+}
 
-    pre {
-        white-space: pre-line;
-        margin: 0;
-        font-family: 'Dancing Script', cursive;
-    }
+.content-carrousel:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
 
-    .contact--details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        padding: 1rem;
-        background-color: #ead3b8b5;
-        text-align: center;
-        font-weight: 600;
-        font-family: 'Dancing Script', cursive;
-        z-index: 1;
-    }
+.content-carrousel figure {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #3b444b;
+    overflow: hidden;
+    position: absolute;
+}
 
-    .contact--details>div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 1rem;
-    }
+.content-carrousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(2) {
+    transform: rotateY(40deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(3) {
+    transform: rotateY(80deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(4) {
+    transform: rotateY(120deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(5) {
+    transform: rotateY(160deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(6) {
+    transform: rotateY(200deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(7) {
+    transform: rotateY(240deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(8) {
+    transform: rotateY(280deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(9) {
+    transform: rotateY(320deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(10) {
+    transform: rotateY(360deg) translateZ(300px); 
+} 
 
-    .box {
-        width: 300px;
-        margin: 0 auto;
-        padding: 5px;
-        background-color: #eaab00; /* gold */
-        /* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
-        /* background-image: gold, gold, white */
-        background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
-        url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
-        background-repeat: no-repeat;
-        background-size: 0 2px, 0 100%, 0% 2px;
-        background-position: top center, top center, bottom center;
-        -webkit-animation: drawBorderFromCenter 15s infinite;
-        animation: drawBorderFromCenter 15s infinite;
-    }
+.shadow {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 1px;
+}
 
-    /* Chrome, Safari, Opera */
-    @-webkit-keyframes drawBorderFromCenter {
-        0% {
-        background-size: 0 2px, 0 0, 100% 100%;
-        }
-        20% {
-        background-size: 100% 2px, 100% 0, 100% 100%;
-        }
-        66%
-        {
-        background-size: 100% 2px, 100% 98%, 100% 100%;
-        }
-        99%
-        {
-        background-size: 100% 2px, 100% 98%, 0 2px;
-        }
-    }
+.content-carrousel img {
+    image-rendering: auto;
+    transition: all 300ms;
+    width: 100%;
+    height: 100%;
+}
 
-    .contact--schedule {
-        text-align: center;
-    }
-    
-    .contact--details label {
-        border: 3px solid rgb(218, 165, 32);
-        padding: 5px 10px;
-        font-weight: 600;
-        font-family: monospace;
-        text-transform: uppercase;
-        color: #fff;
-    }
+.content-carrousel img:hover {
+    transform: scale(1.2);
+    transition: all 300ms;
+}
 
-    #phone-num{
-        font-family: 'Dancing Script', cursive;
-    }
-
-    .contact--address {
-        display: flex;
-        margin: 0;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #address-info {
-        margin: 1rem 0;
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg);
+    } to {
+        transform: rotateY(360deg);
     }
 }

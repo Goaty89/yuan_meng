@@ -78,11 +78,41 @@
 	background: #e6122f;
 }
 
+ #page--gallery h2 {
+    margin: 0;
+    text-align: center;
+}
+
+#page--gallery h2 span {
+    display: block;
+}
+/*
+#page--gallery h2 span:first-of-type {
+
+} */
+
+#page--gallery h2 .years-since {
+    padding-left: 35px;
+    margin: 0 auto;
+    border-top: .4px solid;
+    border-bottom: .4px solid;
+    width: 60%;
+    font-family: monospace;
+    font-weight: 300;
+    letter-spacing: 10px;
+    font-size: .725rem;        
+    font-style: italic;
+    text-align: center;
+}
+
 .flex--teachers .flex__item--upper h2 span:first-of-type {
     background: linear-gradient(0deg, #000, transparent);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Meddon', cursive;
+    font-size: 3.125rem;
+    padding: 0 30px;
 }
 
 .flex--teachers .flex__item--upper h2 span:nth-of-type(2) {
@@ -92,7 +122,8 @@
     word-spacing: 5px;
     letter-spacing: 10px;
     font-weight: 100;
-    margin: 9px 0;
+	margin: 9px 0;
+	padding: 0 30px;
 }
 
 .flex--teachers .flex__item--upper h2 .sifu--phase {
@@ -120,7 +151,10 @@
     background: linear-gradient(0deg, #f7d981d1, transparent);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Meddon', cursive;
+    font-size: 3.125rem;
+    padding: 0 30px;
 }
 
 .flex--students .flex__item--upper h2 span:nth-of-type(2) {
@@ -130,7 +164,8 @@
     letter-spacing: 10px;
     font-weight: 100;
     margin: 9px 0;
-    color: #fff;
+	color: #fff;
+	padding: 0 30px;
 }
 
 .flex--students .flex__item--down {

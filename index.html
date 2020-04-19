@@ -12,10 +12,13 @@
     <link rel="stylesheet" type="text/css" href="./css/sliderCube.css">
     <link rel="stylesheet" type="text/css" href="./css/fontawesomeIcon.css">
     <link rel="stylesheet" type="text/css" href="./css/slider-button.css">
+    <link rel="stylesheet" media="(min-width:601px)" href="./css/style-large.css">
+    <link rel="stylesheet" media="(max-width:600px)" href="./css/style-small.css">
     <script
         src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="./js/anime.min.js"></script>
     <title>圆梦</title>
 </head>
@@ -26,8 +29,12 @@
                 <span class="logo image"></span>
             </div>
             <nav id="page-nav" class="navigation">
-                <label for="hamburger">&#9776;</label>
+                <!-- <label for="hamburger">&#9776;</label> -->
                 <input type="checkbox" id="hamburger"/>
+                <span></span>
+                <span></span>
+                <span></span>
+
                 <ul class="nav--list">
                     <li><a href="#page--introduction" class="active">Introduction</a></li>
                     <li><a href="#page--gallery">Gallery</a></li>
